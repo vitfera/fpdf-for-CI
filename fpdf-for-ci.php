@@ -17,7 +17,7 @@ class Pages extends CI_Controller {
 		$this->fpdf->SetFont('Arial','B',16);
 		$this->fpdf->Cell(40, 10, $content);
 		$this->fpdf->Output($basepath.'/pdf/'.$filename.'.pdf');   // print to the filesystem, save for future download
-		$this0>fpdf->Output($filename.'.pdf', 'D');                // send to browser and force download, not saved on filesystem
+		$this->fpdf->Output($filename.'.pdf', 'D');                // send to browser and force download, not saved on filesystem
 	}
 
 }
